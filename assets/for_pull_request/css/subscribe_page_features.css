@@ -1,0 +1,53 @@
+.row:before, .row:after {display: none !important;}
+
+body {
+background-color: #000;
+}
+
+.row:before, .row:after {display: none !important;}
+
+.kt-grid__item {
+-ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.card {
+    background-color:  #f2f3f8;
+    border-radius: 5px;
+}
+
+.card:hover {
+    background-color: #ff3b3b;
+    color: #ffffff;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.card:hover img {
+  background-color: #ffffff;
+}
+
+#myCarousel {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.carousel-control.left {
+  margin-left: -25px;
+}
+
+.carousel-control.right {
+  margin-right: -25px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 5%;
+}
+
+#cards-non-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+}

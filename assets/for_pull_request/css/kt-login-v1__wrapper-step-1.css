@@ -1,0 +1,74 @@
+.kt-login-v1__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.kt-login-v1 .kt-login-v1__body .kt-login-v1__wrapper .kt-login-v1__container .kt-login-v1__wrapper_body {
+    text-align: center;
+    color: #13131f;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.paragraph-2 {
+    text-align: center;
+    color: #13131f;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.kt-login-v1 .kt-login-v1__body .kt-login-v1__wrapper .kt-login-v1__container .kt-login-v1__wrapper_body {
+
+}
+
+.steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dot-active {
+  height: 7px;
+  width: 7px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.dot-non-active {
+  height: 5px;
+  width: 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.kt-login-v1 .kt-login-v1__body .kt-login-v1__wrapper .kt-login-v1__container .kt-login-v1__actions .kt-login-v1__back {
+  display: inline-block;
+  color: #000000;
+  opacity: 0.5;
+  padding-left: 30px;
+  font-size: 15px;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+.kt-login-v1 .kt-login-v1__body .kt-login-v1__wrapper .kt-login-v1__container .kt-login-v1__actions .kt-login-v1__back:hover {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }

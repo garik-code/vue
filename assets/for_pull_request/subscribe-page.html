@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<!--
+Theme: Keen - The Ultimate Bootstrap Admin Theme
+Author: KeenThemes
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+License: You must have a valid license purchased only from https://themes.getbootstrap.com/product/keen-the-ultimate-bootstrap-admin-theme/ in order to legally use the theme for your project.
+-->
+<html lang="en">
+<!-- begin::Head -->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Leonardo :: Network Manager</title>
+    <meta name="description" content="User login example">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--begin::Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                "families": ["Poppins:300,400,500,600,700"]
+            },
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!--end::Fonts -->
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link href="../custom/login/assets/css/demo1/pages/login/login-v1.css" rel="stylesheet" type="text/css" />
+    <!--end::Page Custom Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="../custom/login/assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../custom/login/assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="../custom/login/assets/css/demo1/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <link href="../custom/login/assets/css/demo1/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <link href="../custom/login/assets/css/demo1/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <link href="../custom/login/assets/css/demo1/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+    <!--end::Layout Skins -->
+    <!--begin::Wrapper Styles -->
+    <link href="./css/subscribe-page.css" rel="stylesheet" type="text/css" />
+    <!--end::Wrapper Styles -->
+    <!--begin::FontAwesome Import -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!--end::FontAwesome Import -->
+    <link rel="shortcut icon" href="../leonardo/favicon.png" />
+    <!-- Hotjar Tracking Code for keenthemes.com -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1070954,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-37564768-1');
+    </script>
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+
+<body class="kt-login-v1--enabled kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <!-- begin:: Page -->
+    <div class="kt-grid kt-grid--ver kt-grid--root" style="background:transparent url('img/bg_1.png') no-repeat center center /cover">
+        <div class="kt-grid__item  kt-grid__item--fluid kt-grid kt-grid--hor kt-login-v1" id="kt_login_v1">
+            <!--begin::Item-->
+            <div class="kt-grid__item">
+                <!--begin::Heade-->
+                <div class="kt-login-v1__head">
+                    <div class="kt-login-v1__logo" style='flex:0.8;'>
+                        <a href="statistics.html">
+                            <img src="../leonardo/logo_full.png" style="width:120px;" alt="" />
+                        </a>
+                    </div>
+                    <div class="kt-login-v1__language" style='display: flex; flex:0.1; justify-content:center; align-items: center;'><i class="fas fa-globe fa-2x ml-5"></i></div>
+                    <div class="kt-login-v1__progile" style='display: flex; flex:0.1; justify-content:center; align-items: center;'><span class='mr-2 ml-2'>Name</span>
+                        <i class="fas fa-user-circle fa-3x"></i></div>
+                </div>
+
+                <!--begin::Head-->
+            </div>
+            <!--end::Item-->
+            <!--begin::Item-->
+            <div class="kt-grid__item  kt-grid kt-grid--ver  kt-grid__item--fluid">
+                <!--begin::Body-->
+                <div class="kt-login-v1__body">
+                    <div class="container-fluid"  id='carousel-subscription' style='display:none;'>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h1 style="color: #000;">Subscribe to Leonardo</h1>
+                            </div>
+                            <div class="col-12">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="card customer-subscription-card d-flex align-items-stretch mx-auto text-center" id='customer-carousel-subscription'>
+                                            <div class="card-body">
+                                                <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 10%;">
+                                                <h5 class="card-title mt-3 mb-5">
+                                                customer-carousel
+                                            </h5>
+                                                <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>250</span></p>
+                                                <p class="card-text mt-1 mb-2 percent-in-month">18,75% in month</p>
+                                                <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                                <button type="button" onClick="" class="btn-subscribe-page align-self-center mt-3 mb-5" data-toggle="modal" data-target="#modal-customer-carousel-subscription" id='button-customer-carousel'>Subscription</button>
+
+                                                <div class="modal fade" id="modal-customer-carousel-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-customer-carousel-subscription-title" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content p-3">
+                                                            <div class="modal-header top-header">
+                                                                <h5 class="modal-title pl-4" id="modal-customer-carousel-subscription-title">Payment terminal</h5>
+                                                                <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id="not-last-step-customer-carousel">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-header bottom-header">
+                                                                <div class='float-left ml-3' id="bottom-header-left-text">customer-carousel $250 subscription</div>
+                                                                <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                            </div>
+                                                            <div class="modal-body" id='modal-body-customer-carousel'>
+                                                                <div class="steps mt-3 mb-3">
+                                                                    <span class="dot-active" id='step-first-customer-carousel-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-second-customer-carousel-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-third-customer-carousel-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                                </div>
+
+                                                                <div class="" id='under-steps-title-customer-carousel'>Select outgoing invoice</div>
+                                                                <div id='registration-form'>
+                                                                    <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-customer-carousel-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-customer-carousel").innerHTML = "";'>
+                                                                        Select Payment Method
+                                                                    </button>
+                                                                    <div class="form-group wrapper-modal-panel" id='select-payment-customer-carousel-step-first'>
+                                                                        <div onclick="remove_options('customer-carousel')" class="option" data-value="Sberbank" id='sberbank-select-customer-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('customer-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-customer-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                        <div onclick="remove_options('customer-carousel')" class="option" data-value="Sberbank" id='sberbank-select-customer-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('customer-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-customer-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                    </div>
+                                                                    <div id="warning-on-first-step-customer-carousel"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer" id='kt-subscribe-v1__actions_customer-carousel'>
+                                                                <div class='kt-subscribe-v1__action_back'>
+                                                                    <a onclick="return_to_step_first('customer-carousel')" id='kt-subscribe-v1__action_back_customer-carousel' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                                </div>
+
+                                                                    <button type="button" onClick="to_second_step_of_payment('customer-carousel')" class="btn-wrapper-modal" id='submit-step-first-customer-carousel-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card bronze-subscription-card d-flex align-items-stretch mx-auto text-center" id='bronze-carousel-subscription'>
+                                            <div class="card-body">
+                                                <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 10%;">
+                                                <h5 class="card-title mt-3 mb-5">
+                                                bronze-carousel
+                                            </h5>
+                                                <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>250</span></p>
+                                                <p class="card-text mt-1 mb-2 percent-in-month">18,75% in month</p>
+                                                <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                                <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-bronze-carousel-subscription" id='button-bronze-carousel'>Subscription</button>
+
+                                                <div class="modal fade" id="modal-bronze-carousel-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-bronze-carousel-subscriptio-title" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header top-header">
+                                                                <h5 class="modal-title pl-4" id="modal-bronze-carousel-subscription-title">Payment terminal</h5>
+                                                                <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id="not-last-step-bronze-carousel">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-header bottom-header">
+                                                                <div class='float-left ml-3' id="bottom-header-left-text">bronze-carousel $500 subscription</div>
+                                                                <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                            </div>
+                                                            <div class="modal-body" id='modal-body-bronze-carousel'>
+                                                                <div class="steps mt-3 mb-3">
+                                                                    <span class="dot-active" id='step-first-bronze-carousel-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-second-bronze-carousel-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-third-bronze-carousel-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                                </div>
+
+                                                                <div class="" id='under-steps-title-bronze-carousel'>Select outgoing invoice</div>
+                                                                <div id='registration-form'>
+                                                                    <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-bronze-carousel-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-bronze-carousel").innerHTML = "";'>
+                                                                        Select Payment Method
+                                                                    </button>
+                                                                    <div class="form-group wrapper-modal-panel" id='select-payment-bronze-carousel-step-first'>
+                                                                        <div onclick="remove_options('bronze-carousel')" class="option" data-value="Sberbank" id='sberbank-select-bronze-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('bronze-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-bronze-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                        <div onclick="remove_options('bronze-carousel')" class="option" data-value="Sberbank" id='sberbank-select-bronze-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('bronze-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-bronze-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                    </div>
+                                                                    <div id="warning-on-first-step-bronze-carousel"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer" id='kt-subscribe-v1__actions_bronze-carousel'>
+                                                                <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                                    <a onclick="return_to_step_first('bronze-carousel')" id='kt-subscribe-v1__action_back_bronze-carousel' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                                </div>
+                                                                <button type="button" onClick="to_second_step_of_payment('bronze-carousel')" class="btn-wrapper-modal" id='submit-step-first-bronze-carousel-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+
+                                        <div class="card silver-subscription-card d-flex align-items-stretch mx-auto text-center" id='silver-carousel-subscription'>
+                                            <div class="card-body">
+                                                <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 10%;">
+                                                <h5 class="card-title mt-3 mb-5">
+                                                silver-carousel
+                                            </h5>
+                                                <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>500</span></p>
+                                                <p class="card-text mt-1 mb-2 percent-in-month">20,62% in month</p>
+                                                <p class="card-text mt-2 mb-5 percent-in-year">247,5% in year</p>
+                                                <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-silver-carousel-subscription" id='button-silver-carousel'>Subscription</button>
+
+                                                <div class="modal fade" id="modal-silver-carousel-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-silver-carousel-subscription-title" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header top-header">
+                                                                <h5 class="modal-title pl-4" id="modal-bronze-carousel-subscription-title">Payment terminal</h5>
+                                                                <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id="not-last-step-silver-carousel">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-header bottom-header">
+                                                                <div class='float-left ml-3' id="bottom-header-left-text">silver-carousel $750 subscription</div>
+                                                                <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                            </div>
+                                                            <div class="modal-body" id='modal-body-silver-carousel'>
+                                                                <div class="steps mt-3 mb-3">
+                                                                    <span class="dot-active" id='step-first-silver-carousel-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-second-silver-carousel-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-third-silver-carousel-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                                </div>
+
+                                                                <div class="" id='under-steps-title-silver-carousel'>Select outgoing invoice</div>
+                                                                <div id='registration-form'>
+                                                                    <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-silver-carousel-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-silver-carousel").innerHTML = "";'>
+                                                                        Select Payment Method
+                                                                    </button>
+                                                                    <div class="form-group wrapper-modal-panel" id='select-payment-silver-carousel-step-first'>
+                                                                        <div onclick="remove_options('silver-carousel')" class="option" data-value="Sberbank" id='sberbank-select-silver-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('silver-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-silver-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                        <div onclick="remove_options('silver-carousel')" class="option" data-value="Sberbank" id='sberbank-select-silver-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('silver-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-silver-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                    </div>
+                                                                    <div id="warning-on-first-step-silver-carousel"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer" id='kt-subscribe-v1__actions_silver-carousel'>
+                                                                <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                                    <a onclick="return_to_step_first('silver-carousel')" id='kt-subscribe-v1__action_back_silver-carousel' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                                </div>
+                                                                <button type="button" onClick="to_second_step_of_payment('silver-carousel')" class="btn-wrapper-modal" id='submit-step-first-silver-carousel-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card gold-subscription-card d-flex align-items-stretch mx-auto text-center" id='gold-carousel-subscription'>
+                                            <div class="card-body">
+                                                <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 10%;">
+                                                <h5 class="card-title mt-3 mb-5">
+                                                gold-carousel
+                                            </h5>
+                                                <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>1000</span></p>
+                                                <p class="card-text mt-1 mb-2 percent-in-month">22,5% in month</p>
+                                                <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                                <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-gold-carousel-subscription" id='button-gold-carousel'>Subscription</button>
+
+                                                <div class="modal fade" id="modal-gold-carousel-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-gold-carousel-subscription-title" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header top-header">
+                                                                <h5 class="modal-title pl-4" id="modal-platinum-carousel-subscription-title">Payment terminal</h5>
+                                                                <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id="not-last-step-gold-carousel">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-header bottom-header">
+                                                                <div class='float-left ml-3' id="bottom-header-left-text">gold-carousel $1000 subscription</div>
+                                                                <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                            </div>
+                                                            <div class="modal-body" id='modal-body-gold-carousel'>
+                                                                <div class="steps mt-3 mb-3">
+                                                                    <span class="dot-active" id='step-first-gold-carousel-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-second-gold-carousel-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-third-gold-carousel-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                                </div>
+
+                                                                <div class="" id='under-steps-title-gold-carousel'>Select outgoing invoice</div>
+                                                                <div id='registration-form'>
+                                                                    <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-gold-carousel-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-gold-carousel").innerHTML = "";'>
+                                                                        Select Payment Method
+                                                                    </button>
+                                                                    <div class="form-group wrapper-modal-panel" id='select-payment-gold-carousel-step-first'>
+                                                                        <div onclick="remove_options('gold-carousel')" class="option" data-value="Sberbank" id='sberbank-select-gold-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('gold-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-gold-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                        <div onclick="remove_options('gold-carousel')" class="option" data-value="Sberbank" id='sberbank-select-gold-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('gold-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-gold-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                    </div>
+                                                                    <div id="warning-on-first-step-gold-carousel"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer" id='kt-subscribe-v1__actions_gold-carousel'>
+                                                                <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                                    <a onclick="return_to_step_first('gold-carousel')" id='kt-subscribe-v1__action_back_gold-carousel' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                                </div>
+                                                                <button type="button" onClick="to_second_step_of_payment('gold-carousel')" class="btn-wrapper-modal" id='submit-step-first-gold-carousel-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="card platinum-subscription-card d-flex align-items-stretch mx-auto text-center" id='platinum-carousel-subscription'>
+                                            <div class="card-body" style='color: #ffffff;'>
+                                                <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 10%;">
+                                                <h5 class="card-title mt-3 mb-5">
+                                                platinum-carousel
+                                            </h5>
+                                                <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>2000</span></p>
+                                                <p class="card-text mt-1 mb-2 percent-in-month">22.5% in month</p>
+                                                <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                                <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-platinum-carousel-subscription" id='button-platinum-carousel' style='color: #fff;'>Subscription</button>
+
+                                                <div class="modal fade" id="modal-platinum-carousel-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-platinum-carousel-subscription-title" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header top-header">
+                                                                <h5 class="modal-title pl-4" id="modal-platinum-carousel-subscription-title">Payment terminal</h5>
+                                                                <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id="not-last-step-platinum-carousel">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-header bottom-header">
+                                                                <div class='float-left ml-3' id="bottom-header-left-text">platinum-carousel $1000 subscription</div>
+                                                                <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                            </div>
+                                                            <div class="modal-body" id='modal-body-platinum-carousel'>
+                                                                <div class="steps mt-3 mb-3">
+                                                                    <span class="dot-active" id='step-first-platinum-carousel-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-second-platinum-carousel-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                                    <span class="dot-non-active" id='step-third-platinum-carousel-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                                </div>
+
+                                                                <div class="" id='under-steps-title-platinum-carousel'>Select outgoing invoice</div>
+                                                                <div id='registration-form'>
+                                                                    <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-platinum-carousel-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-platinum-carousel").innerHTML = "";'>
+                                                                        Select Payment Method
+                                                                    </button>
+                                                                    <div class="form-group wrapper-modal-panel" id='select-payment-platinum-carousel-step-first'>
+                                                                        <div onclick="remove_options('platinum-carousel')" class="option" data-value="Sberbank" id='sberbank-select-platinum-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('platinum-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-platinum-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                        <div onclick="remove_options('platinum-carousel')" class="option" data-value="Sberbank" id='sberbank-select-platinum-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                        <div onclick="remove_options('platinum-carousel')" class="option" data-value="Tinkoff" id='tinkoff-select-platinum-carousel-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                    </div>
+                                                                    <div id="warning-on-first-step-platinum-carousel"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer" id='kt-subscribe-v1__actions_platinum-carousel'>
+                                                                <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                                    <a onclick="return_to_step_first('platinum-carousel')" id='kt-subscribe-v1__action_back_platinum-carousel' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                                </div>
+                                                                <button type="button" onClick="to_second_step_of_payment('platinum-carousel')" class="btn-wrapper-modal" id='submit-step-first-platinum-carousel-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  </div>
+                                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-5">
+                            <div class="col-12 text-center">
+                                <h3 style="color: #000;">Options</h3></div>
+                            <table class="table ">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left" style='opacity: 0.7;'>Subscription</th>
+                                        <td class="text-center" style='opacity: 0.7;'>Auto follow</td>
+                                        <td class="text-center" style='opacity: 0.7;'>Trust managment</td>
+                                        <td class="text-center" style='opacity: 0.7;'>Hard Plastic</td>
+                                        <td class="text-center" style='opacity: 0.7;'>Network manager</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Customer</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bronze</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Silver</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Gold</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Platinum</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="container-fluid" id='non-carousel-subscription' style='display: block;'>
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center">
+                                <h1 style="color: #000;">Subscribe to Leonardo</h1>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-stretch pt-5 pb-5 ml-4 mr-4">
+                                <div class="card customer-subscription-card d-flex align-items-stretch mx-auto text-center" style="width: 100%;">
+                                    <div class="card-body">
+                                        <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 20%;">
+                                        <h5 class="card-title mt-3 mb-5">
+                                        Customer
+                                    </h5>
+                                        <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>250</span></p>
+                                        <p class="card-text mt-1 mb-2 percent-in-month">18,75% in month</p>
+                                        <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                        <button type="button" onClick="" class="btn-subscribe-page align-self-center mt-3 mb-5" data-toggle="modal" data-target="#modal-customer-subscription" id='button-customer'>Subscription</button>
+
+                                        <div class="modal fade" id="modal-customer-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-customer-subscription-title" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content p-3">
+                                                    <div class="modal-header top-header">
+                                                        <h5 class="modal-title pl-4" id="modal-customer-subscription-title">Payment terminal</h5>
+                                                        <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id='not-last-step-customer'>
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-header bottom-header">
+                                                        <div class='float-left ml-3' id="bottom-header-left-text">Customer $250 subscription</div>
+                                                        <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                    </div>
+                                                    <div class="modal-body" id='modal-body-customer'>
+                                                        <div class="steps mt-3 mb-3">
+                                                            <span class="dot-active" id='step-first-customer-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-second-customer-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-third-customer-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                        </div>
+
+                                                        <div class="" id='under-steps-title-customer'>Select outgoing invoice</div>
+                                                        <div id='registration-form'>
+                                                            <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-customer-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-customer").innerHTML = "";'>
+                                                                Select Payment Method
+                                                            </button>
+                                                            <div class="form-group wrapper-modal-panel" id='select-payment-customer-step-first'>
+                                                                <div onclick="remove_options('customer')" class="option" data-value="Sberbank" id='sberbank-select-customer-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('customer')" class="option" data-value="Tinkoff" id='tinkoff-select-customer-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                <div onclick="remove_options('customer')" class="option" data-value="Sberbank" id='sberbank-select-customer-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('customer')" class="option" data-value="Tinkoff" id='tinkoff-select-customer-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                            </div>
+                                                            <div id="warning-on-first-step-customer"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer" id='kt-subscribe-v1__actions_customer'>
+                                                        <div class='kt-subscribe-v1__action_back'>
+                                                            <a onclick="return_to_step_first('customer')" id='kt-subscribe-v1__action_back_customer' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                        </div>
+
+                                                            <button type="button" onClick="to_second_step_of_payment('customer')" class="btn-wrapper-modal" id='submit-step-first-customer-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-stretch pt-5 pb-5 ml-4 mr-4">
+                                <div class="card bronze-subscription-card d-flex align-items-stretch mx-auto text-center" style="width: 100%;">
+                                    <div class="card-body">
+                                        <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 20%;">
+                                        <h5 class="card-title mt-3 mb-5">
+                                        Bronze
+                                    </h5>
+                                        <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>250</span></p>
+                                        <p class="card-text mt-1 mb-2 percent-in-month">18,75% in month</p>
+                                        <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                        <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-bronze-subscription" id='button-bronze'>Subscription</button>
+
+                                        <div class="modal fade" id="modal-bronze-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-bronze-subscriptio-title" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header top-header">
+                                                        <h5 class="modal-title pl-4" id="modal-bronze-subscription-title">Payment terminal</h5>
+                                                        <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id='not-last-step-bronze'>
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-header bottom-header">
+                                                        <div class='float-left ml-3' id="bottom-header-left-text">Bronze $500 subscription</div>
+                                                        <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                    </div>
+                                                    <div class="modal-body" id='modal-body-bronze'>
+                                                        <div class="steps mt-3 mb-3">
+                                                            <span class="dot-active" id='step-first-bronze-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-second-bronze-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-third-bronze-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                        </div>
+
+                                                        <div class="" id='under-steps-title-bronze'>Select outgoing invoice</div>
+                                                        <div id='registration-form'>
+                                                            <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-bronze-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-customer").innerHTML = "";'>
+                                                                Select Payment Method
+                                                            </button>
+                                                            <div class="form-group wrapper-modal-panel" id='select-payment-bronze-step-first'>
+                                                                <div onclick="remove_options('bronze')" class="option" data-value="Sberbank" id='sberbank-select-bronze-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('bronze')" class="option" data-value="Tinkoff" id='tinkoff-select-bronze-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                <div onclick="remove_options('bronze')" class="option" data-value="Sberbank" id='sberbank-select-bronze-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('bronze')" class="option" data-value="Tinkoff" id='tinkoff-select-bronze-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                            </div>
+                                                            <div id="warning-on-first-step-bronze"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer" id='kt-subscribe-v1__actions_bronze'>
+                                                        <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                            <a onclick="return_to_step_first('bronze')" id='kt-subscribe-v1__action_back_bronze' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                        </div>
+                                                        <button type="button" onClick="to_second_step_of_payment('bronze')" class="btn-wrapper-modal" id='submit-step-first-bronze-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-stretch pt-5 pb-5 ml-4 mr-4">
+                                <div class="card silver-subscription-card d-flex align-items-stretch mx-auto text-center" style="width: 100%;">
+                                    <div class="card-body">
+                                        <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 20%;">
+                                        <h5 class="card-title mt-3 mb-5">
+                                        Silver
+                                    </h5>
+                                        <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>500</span></p>
+                                        <p class="card-text mt-1 mb-2 percent-in-month">20,62% in month</p>
+                                        <p class="card-text mt-2 mb-5 percent-in-year">247,5% in year</p>
+                                        <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-silver-subscription" id='button-silver'>Subscription</button>
+
+                                        <div class="modal fade" id="modal-silver-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-silver-subscription-title" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header top-header">
+                                                        <h5 class="modal-title pl-4" id="modal-bronze-subscription-title">Payment terminal</h5>
+                                                        <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id='not-last-step-silver'>
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-header bottom-header">
+                                                        <div class='float-left ml-3' id="bottom-header-left-text">Silver $750 subscription</div>
+                                                        <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                    </div>
+                                                    <div class="modal-body" id='modal-body-silver'>
+                                                        <div class="steps mt-3 mb-3">
+                                                            <span class="dot-active" id='step-first-silver-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-second-silver-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-third-silver-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                        </div>
+
+                                                        <div class="" id='under-steps-title-silver'>Select outgoing invoice</div>
+                                                        <div id='registration-form'>
+                                                            <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-silver-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-customer").innerHTML = "";'>
+                                                                Select Payment Method
+                                                            </button>
+                                                            <div class="form-group wrapper-modal-panel" id='select-payment-silver-step-first'>
+                                                                <div onclick="remove_options('silver')" class="option" data-value="Sberbank" id='sberbank-select-silver-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('silver')" class="option" data-value="Tinkoff" id='tinkoff-select-silver-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                <div onclick="remove_options('silver')" class="option" data-value="Sberbank" id='sberbank-select-silver-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('silver')" class="option" data-value="Tinkoff" id='tinkoff-select-silver-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                            </div>
+                                                            <div id="warning-on-first-step-silver"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer" id='kt-subscribe-v1__actions_silver'>
+                                                        <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                            <a onclick="return_to_step_first('silver')" id='kt-subscribe-v1__action_back_silver' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                        </div>
+                                                        <button type="button" onClick="to_second_step_of_payment('silver')" class="btn-wrapper-modal" id='submit-step-first-silver-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-stretch pt-5 pb-5 ml-4 mr-4">
+                                <div class="card gold-subscription-card d-flex align-items-stretch mx-auto text-center" style="width: 100%;">
+                                    <div class="card-body">
+                                        <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 20%;">
+                                        <h5 class="card-title mt-3 mb-5">
+                                        Gold
+                                    </h5>
+                                        <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>1000</span></p>
+                                        <p class="card-text mt-1 mb-2 percent-in-month">22,5% in month</p>
+                                        <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                        <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-gold-subscription" id='button-gold'>Subscription</button>
+
+                                        <div class="modal fade" id="modal-gold-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-gold-subscription-title" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header top-header">
+                                                        <h5 class="modal-title pl-4" id="modal-platinum-subscription-title">Payment terminal</h5>
+                                                        <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id='not-last-step-gold'>
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-header bottom-header">
+                                                        <div class='float-left ml-3' id="bottom-header-left-text">Gold $1000 subscription</div>
+                                                        <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                    </div>
+                                                    <div class="modal-body" id='modal-body-gold'>
+                                                        <div class="steps mt-3 mb-3">
+                                                            <span class="dot-active" id='step-first-gold-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-second-gold-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-third-gold-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                        </div>
+
+                                                        <div class="" id='under-steps-title-gold'>Select outgoing invoice</div>
+                                                        <div id='registration-form'>
+                                                            <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-gold-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-customer").innerHTML = "";'>
+                                                                Select Payment Method
+                                                            </button>
+                                                            <div class="form-group wrapper-modal-panel" id='select-payment-gold-step-first'>
+                                                                <div onclick="remove_options('gold')" class="option" data-value="Sberbank" id='sberbank-select-gold-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('gold')" class="option" data-value="Tinkoff" id='tinkoff-select-gold-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                <div onclick="remove_options('gold')" class="option" data-value="Sberbank" id='sberbank-select-gold-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('gold')" class="option" data-value="Tinkoff" id='tinkoff-select-gold-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                            </div>
+                                                            <div id="warning-on-first-step-gold"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer" id='kt-subscribe-v1__actions_gold'>
+                                                        <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                            <a onclick="return_to_step_first('gold')" id='kt-subscribe-v1__action_back_gold' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                        </div>
+                                                        <button type="button" onClick="to_second_step_of_payment('gold')" class="btn-wrapper-modal" id='submit-step-first-gold-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-stretch pt-5 pb-5 ml-4 mr-4">
+                                <div class="card platinum-subscription-card d-flex align-items-stretch mx-auto text-center" style="width: 100%;">
+                                    <div class="card-body" style='color: #ffffff;'>
+                                        <img src="./img/logo_red_alpha.png" alt="" class="mt-5" style="width: 20%;">
+                                        <h5 class="card-title mt-3 mb-5">
+                                        Platinum
+                                    </h5>
+                                        <p class="card-text mt-5"><span class='dollar-char'>$</span><span class='int-price-of-subscription'>2000</span></p>
+                                        <p class="card-text mt-1 mb-2 percent-in-month">22.5% in month</p>
+                                        <p class="card-text mt-2 mb-5 percent-in-year">270% in year</p>
+                                        <button type="button" onClick="" class="btn-subscribe-page mt-3 mb-5" data-toggle="modal" data-target="#modal-platinum-subscription" id='button-platinum' style='color: #fff;'>Subscription</button>
+
+                                        <div class="modal fade" id="modal-platinum-subscription" tabindex="-1" role="dialog" aria-labelledby="modal-platinum-subscription-title" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header top-header">
+                                                        <h5 class="modal-title pl-4" id="modal-platinum-subscription-title">Payment terminal</h5>
+                                                        <button type="button" class="close pr-5 d-flex align-self-center" data-dismiss="modal" aria-label="Close" aria-hidden="true" id='not-last-step-platinum'>
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-header bottom-header">
+                                                        <div class='float-left ml-3' id="bottom-header-left-text">Platinum $1000 subscription</div>
+                                                        <div class='float-right mr-3' id="bottom-header-right-text">Amount: 1000 USD</div>
+                                                    </div>
+                                                    <div class="modal-body" id='modal-body-platinum'>
+                                                        <div class="steps mt-3 mb-3">
+                                                            <span class="dot-active" id='step-first-platinum-payment'></span> <!-- "step-first-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-second-platinum-payment'></span> <!-- "step-second-" + type_of_subscription + "-payment" -->
+                                                            <span class="dot-non-active" id='step-third-platinum-payment'></span> <!-- "step-third-" + type_of_subscription + "-payment" -->
+                                                        </div>
+
+                                                        <div class="" id='under-steps-title-platinum'>Select outgoing invoice</div>
+                                                        <div id='registration-form'>
+                                                            <button class="wrapper-modal-accordion mb-3" id='form-group-select-payment-platinum-step-first' style='display: block;' onclick='document.getElementById("warning-on-first-step-customer").innerHTML = "";'>
+                                                                Select Payment Method
+                                                            </button>
+                                                            <div class="form-group wrapper-modal-panel" id='select-payment-platinum-step-first'>
+                                                                <div onclick="remove_options('platinum')" class="option" data-value="Sberbank" id='sberbank-select-platinum-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('platinum')" class="option" data-value="Tinkoff" id='tinkoff-select-platinum-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                                <div onclick="remove_options('platinum')" class="option" data-value="Sberbank" id='sberbank-select-platinum-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Sberbank</div>
+                                                                <div onclick="remove_options('platinum')" class="option" data-value="Tinkoff" id='tinkoff-select-platinum-payment-step-first' style='border-radius: 46px; display: flex; align-items: center;'>Tinkoff</div>
+                                                            </div>
+                                                            <div id="warning-on-first-step-platinum"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer" id='kt-subscribe-v1__actions_platinum'>
+                                                        <div class='mr-auto kt-subscribe-v1__action_back ml-5'>
+                                                            <a onclick="return_to_step_first('platinum')" id='kt-subscribe-v1__action_back_platinum' style='display:none; opacity: 0.3; font-size:1.1em;'></a>
+                                                        </div>
+                                                        <button type="button" onClick="to_second_step_of_payment('platinum')" class="btn-wrapper-modal" id='submit-step-first-platinum-modal-wrapper' style="font-size: 1.2em;">NEXT</button> <!-- submit-step-first-" + type_of_subscription + "-modal-wrapper -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 text-center">
+                                <h3 style="color: #000;">Options</h3></div>
+                            <table class="table" id="options-table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left" style='opacity: 0.7;'>Subscription</th>
+                                        <td class="text-center" style='opacity: 0.7;'>Auto follow</td>
+                                        <td class="text-center" style='opacity: 0.7;'>Trust managment</td>
+                                        <td class="text-center" style='opacity: 0.7;'>Hard Plastic</td>
+                                        <td class="text-center" style='opacity: 0.7;'>Network manager</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Customer</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bronze</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Silver</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Gold</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Platinum</strong></td>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                        <th class="text-center" style='color:#ff3b3b;'>+</th>
+                                        <th class="text-center">-</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--begin::Body-->
+            </div>
+            <!--end::Item-->
+            <!--begin::Item-->
+            <div class="kt-grid__item">
+                <div class="kt-login-v1__footer">
+                    <div class="kt-login-v1__menu">
+                        <a href="statistics.html">Privacy</a>
+                        <a href="statistics.html">Legal</a>
+                        <a href="statistics.html">Contact</a>
+                    </div>
+                    <div class="kt-login-v1__copyright" style='color: black'>
+                        <a href="statistics.html">&copy; 2019 Leonardo Inc</a>
+                    </div>
+                </div>
+            </div>
+            <!--end::Item-->
+            <div id="kt_scrolltop" class="kt-scrolltop">
+        		<i class="fas fa-arrow-up"></i>
+        	</div>
+        </div>
+    </div>
+    <!-- end:: Page -->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
+        var KTAppOptions = {
+            "colors": {
+                "state": {
+                    "brand": "#ff393a",
+                    "metal": "#c4c5d6",
+                    "light": "#ffffff",
+                    "accent": "#00c5dc",
+                    "primary": "#ff393a",
+                    "success": "#34bfa3",
+                    "info": "#36a3f7",
+                    "warning": "#ffb822",
+                    "danger": "#fd3995",
+                    "focus": "#9816f4"
+                },
+                "base": {
+                    "label": [
+                        "#c5cbe3",
+                        "#a1a8c3",
+                        "#3d4465",
+                        "#3e4466"
+                    ],
+                    "shape": [
+                        "#f0f3ff",
+                        "#d9dffa",
+                        "#afb4d4",
+                        "#646c9a"
+                    ]
+                }
+            }
+        };
+    </script>
+    <!--begin::Boostrap4 JS import -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--end::Bootstrap4 JS import -->
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="../custom/login/assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
+    <script src="../custom/login/assets/js/demo1/scripts.bundle.js" type="text/javascript"></script>
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Scripts(used by this page) -->
+    <script src="../custom/login/assets/js/demo1/pages/custom/user/login.js" type="text/javascript"></script>
+    <!--end::Page Scripts -->
+    <!--start::Wrapper Modal Accordion-->
+    <script src="./js/wrapper-modal-accordion.js" type="text/javascript"></script>
+    <!--end::Wrapper Modal Accordion-->
+    <script src="./js/to_second_step_of_payment.js" type="text/javascript"></script>
+    <!--begin:: Third Step of Payment -->
+    <script src="./js/to_third_step_of_payment.js" type="text/javascript"></script>
+    <!--end:: Third Step of Payment -->
+    <!--start:: Return to first step payment -->
+    <script src="./js/return_to_first_step.js" type="text/javascript"></script>
+    <!--end:: Return to first step payment -->
+    <!--start:: Remove options -->
+    <script src="./js/remove_options.js" type="text/javascript"></script>
+    <!--end:: Remove options -->
+    <script src="./js/check_width_dynamically.js" type="text/javascript"></script>
+
+</body>
+<!-- end::Body -->
+
+</html>
