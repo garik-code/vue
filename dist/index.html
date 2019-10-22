@@ -1,46 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>Leonardo :: Network Manager</title>
-    <meta name="description" content="User login example">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--begin::Fonts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-    <script>
-        WebFont.load({
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><link rel=icon href=/favicon.ico><title>Leonardo :: Network Manager</title><meta name=description content="User login example"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta http-equiv=X-UA-Compatible content="IE=edge"><script src=https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js></script><script>WebFont.load({
         google: {"families":["Poppins:300,400,500,600,700"]},
         active: function() {
           sessionStorage.fonts = true;
         }
-      });
-    </script>
-    <!--end::Fonts -->
-    <!--begin::Page Custom Styles(used by this page) -->
-    <link href="http://localhost:8888/custom/login/assets/css/demo1/pages/login/login-v1.css" rel="stylesheet" type="text/css" />
-    <!--end::Page Custom Styles -->
-    <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="http://localhost:8888/custom/login/assets/vendors/global/vendors.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="http://localhost:8888/custom/login/assets/css/demo1/style.bundle.css" rel="stylesheet" type="text/css" />
-    <!--end::Global Theme Styles -->
-    <!--begin::Layout Skins(used by all pages) -->
-    <link href="http://localhost:8888/custom/login/assets/css/demo1/skins/header/base/light.css" rel="stylesheet" type="text/css" />
-    <link href="http://localhost:8888/custom/login/assets/css/demo1/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
-    <link href="http://localhost:8888/custom/login/assets/css/demo1/skins/brand/navy.css" rel="stylesheet" type="text/css" />
-    <link href="http://localhost:8888/custom/login/assets/css/demo1/skins/aside/navy.css" rel="stylesheet" type="text/css" />
-    <!--end::Layout Skins -->
-    <link href="http://localhost:8888/for_pull_request/css/kt-login-v1__wrapper-step-1.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but hello-world doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script>
-    var KTAppOptions = {
+      });</script><link href=http://localhost:8888/custom/login/assets/css/demo1/pages/login/login-v1.css rel=stylesheet type=text/css><link href=http://localhost:8888/custom/login/assets/vendors/global/vendors.bundle.css rel=stylesheet type=text/css><link href=http://localhost:8888/custom/login/assets/css/demo1/style.bundle.css rel=stylesheet type=text/css><link href=http://localhost:8888/custom/login/assets/css/demo1/skins/header/base/light.css rel=stylesheet type=text/css><link href=http://localhost:8888/custom/login/assets/css/demo1/skins/header/menu/light.css rel=stylesheet type=text/css><link href=http://localhost:8888/custom/login/assets/css/demo1/skins/brand/navy.css rel=stylesheet type=text/css><link href=http://localhost:8888/custom/login/assets/css/demo1/skins/aside/navy.css rel=stylesheet type=text/css><link href=http://localhost:8888/for_pull_request/css/kt-login-v1__wrapper-step-1.css rel=stylesheet type=text/css><link href=/css/app.650c1f25.css rel=preload as=style><link href=/js/app.39f31350.js rel=preload as=script><link href=/js/chunk-vendors.f006bf2e.js rel=preload as=script><link href=/css/app.650c1f25.css rel=stylesheet></head><body><noscript><strong>We're sorry but hello-world doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script>var KTAppOptions = {
         "colors": {
             "state": {
                 "brand": "#ff393a",
@@ -69,18 +32,7 @@
                 ]
             }
         }
-    };
-    </script>
-    <!-- end::Global Config -->
-    <!--begin::Global Theme Bundle(used by all pages) -->
-    <script src="http://localhost:8888/custom/login/assets/vendors/global/vendors.bundle.js" type="text/javascript"></script>
-    <script src="http://localhost:8888/custom/login/assets/js/demo1/scripts.bundle.js" type="text/javascript"></script>
-    <!--end::Global Theme Bundle -->
-    <!--begin::Page Scripts(used by this page) -->
-    <script src="http://localhost:8888/custom/login/assets/js/demo1/pages/custom/user/login.js" type="text/javascript"></script>
-    <!--end::Page Scripts -->
-    <script>
-    function to_second_step_of_registration() {
+    };</script><script src=http://localhost:8888/custom/login/assets/vendors/global/vendors.bundle.js></script><script src=http://localhost:8888/custom/login/assets/js/demo1/scripts.bundle.js></script><script src=http://localhost:8888/custom/login/assets/js/demo1/pages/custom/user/login.js></script><script>function to_second_step_of_registration() {
         var element_step_one = document.getElementById("step-first-of-registration");
         element_step_one.classList.add("dot-non-active");
         element_step_one.classList.remove("dot-active");
@@ -133,13 +85,7 @@
         var submit_step_first = document.getElementById("submit-step-first");
         submit_step_first.setAttribute("onclick", "to_third_step_of_registration()");
         submit_step_first.setAttribute('id', 'submit-step-second');
-    }
-    </script>
-    <!--end::Step-2 of Registration-->
-    <!--begin::Step-3 of Registration-->
-    <script>
-
-        function to_third_step_of_registration() {
+    }</script><script>function to_third_step_of_registration() {
             var element_step_two = document.getElementById("step-second-of-registration");
             element_step_two.classList.add("dot-non-active");
             element_step_two.classList.remove("dot-active");
@@ -201,8 +147,4 @@
             submit_step_third.setAttribute('id', 'submit-step-third');
             submit_step_third.setAttribute('style', 'width: 100%;');
             submit_step_third.innerHTML = 'Create account';
-        }
-
-    </script>
-  </body>
-</html>
+        }</script><script src=/js/chunk-vendors.f006bf2e.js></script><script src=/js/app.39f31350.js></script></body></html>
